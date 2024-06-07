@@ -1,0 +1,84 @@
+@import "../colors.css";
+@import "../typography.css";
+
+.header {
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 86px;
+  justify-content: center;
+  background: var(--header-bg-color);
+  box-shadow: inset 0px 12px 24px 0px var(--box-shadow-color),
+    inset 0px 4px 24px 0px var(--box-shadow-color);
+}
+
+.header__logo {
+  max-width: 138px;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.main-title {
+  color: var(--main-text-color);
+  font: var(--font-title);
+  letter-spacing: -0.24px;
+}
+
+.start-wrapper {
+  padding: 6px 12px;
+  border-radius: 2px;
+  border: 1px solid var(--main-accent-color);
+}
+
+.start-wrapper__text {
+  font: var(--font-start);
+  color: var(--main-accent-color);
+}
+
+.followers {
+  display: flex;
+}
+
+.followers__item {
+  margin-right: 25px;
+  font: var(--font-400-followers);
+}
+
+.followers__item--bold {
+  font: var(--font-700-followers);
+}
+
+.date {
+  display: flex;
+}
+
+.date__text {
+  margin-right: 11px;
+}
+
+.date__input-container {
+  margin-right: 22px;
+}
+
+.custom-input {
+}
+
+.icon-clear {
+}
+
+.icon-calendar {
+}

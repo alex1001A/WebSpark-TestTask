@@ -1,0 +1,33 @@
+@import "./colors.css";
+@import "./typography.css";
+
+body {
+  font-size: 16px;
+  color: var(--main-text-color);
+  position: relative;
+  font: var(--main-text-font);
+}
+
+body .vector-1 {
+  width: 689px;
+  position: absolute;
+  z-index: -1;
+}
+
+body .vector-2 {
+  width: 315px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 836px;
+  margin: 0 auto;
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Roboto:wght@400;500;700&display=swap");
+/* "Roboto", sans-serif;
+"Montserrat", sans-serif; */
+
+:root {
+  --roboto-ff: "Roboto", sans-serif;
+  --montserrat-ff: "Montserrat", sans-serif;
+
+
+  /* Header fonts */
+  --font-400-followers: 400 14px/normal var( --roboto-ff);
+  --font-700-followers: 700 14px/normal var( --roboto-ff);
+
+  --font-title: 500 24px/normal var(--montserrat-ff);
+  --font-start: 400 13px/normal var(--roboto-ff);
+  
+  --font-date: 400 16px/normal var(--roboto-ff);
+  
+  --font-input-date: 400 13px/normal var(--roboto-ff);
+
+  /* Main fonts */
+  --main-text-font: 500 16px/normal var(--roboto-ff);
+  --add-text-font: 500 14px/normal var(--roboto-ff);
+  
+  --button-font: 500 11px/normal var(--roboto-ff);
+}
+
+.item__text--acc {
+  font: var(--add-text-font);
+}
