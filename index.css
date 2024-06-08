@@ -5,3 +5,5 @@
 
 @import "./style/sections/header.css";
 @import "./style/sections/main.css";
+@import './style/sections/orientation-list.css';
+@import './style/sections/loadMoreBtn.css'

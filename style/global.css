@@ -6,6 +6,7 @@ body {
   color: var(--main-text-color);
   position: relative;
   font: var(--main-text-font);
+  height: 100vh;
 }
 
 body .vector-1 {
@@ -14,12 +15,24 @@ body .vector-1 {
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  body .vector-1 {
+    width: 400px;
+  }
+}
+
 body .vector-2 {
   width: 315px;
   position: absolute;
-  bottom: 0;
+  bottom: -40vh;
   right: 0;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  body .vector-2 {
+    display: none;
+  }
 }
 
 .wrapper {

@@ -11,46 +11,63 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="https://t3.ftcdn.net/jpg/04/06/91/94/360_F_406919447_kAcC5gdh1rpYlVxwMfHtUTGf24PUYSq8.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./airDatepicker/air-datepicker.css" />
     <title>WebSpark</title>
   </head>
   <body>
     <div class="wrapper">
       <img class="vector-1" src="./img/vector-1.png" alt="vector-1" />
-      <!-- <img class="vector-2" src="./img/vector-2.png" alt="vector-2" /> -->
+      <img class="vector-2" src="./img/vector-2.png" alt="vector-2" />
       <header class="header">
-        <img class="header__logo" src="./img/logo.png" alt="WebSpark-logo" />
-        <div class="header__content">
-          <div class="header__title">
-            <h1 class="main-title">monblanproject</h1>
-            <div class="start-wrapper">
-              <p class="start-wrapper__text">Start on 17-02-2016</p>
+        <div class="container header__container">
+          <img class="header__logo" src="./img/logo.png" alt="WebSpark-logo" />
+          <div class="header__content">
+            <div class="header__title">
+              <h1 class="main-title">monblanproject</h1>
+              <div class="start-wrapper">
+                <p class="start-wrapper__text">Start on 17-02-2016</p>
+              </div>
             </div>
-          </div>
-          <div class="followers">
-            <p class="followers__item">
-              <span class="followers__item--bold"> 870 </span>
-              posts
-            </p>
-            <p class="followers__item">
-              <span class="followers__item--bold"> 11,787 </span>
-              followers
-            </p>
-            <p class="followers__item">
-              <span class="followers__item--bold"> 112 </span>
-              following
-            </p>
-          </div>
-          <div class="date">
-            <p class="date__text">Date</p>
-            <div class="date__input-container">
-              <input type="text" placeholder="from" class="custom-input" />
-              <span class="icon-clear">&#x2715;</span>
-              <span class="icon-calendar">&#x1F4C5;</span>
+            <div class="followers">
+              <p class="followers__item">
+                <span class="followers__item--bold"> 870 </span>
+                posts
+              </p>
+              <p class="followers__item">
+                <span class="followers__item--bold"> 11,787 </span>
+                followers
+              </p>
+              <p class="followers__item">
+                <span class="followers__item--bold"> 112 </span>
+                following
+              </p>
             </div>
-            <div class="date__input-container">
-              <input type="text" placeholder="from" class="custom-input" />
-              <span class="icon-clear">&#x2715;</span>
-              <span class="icon-calendar">&#x1F4C5;</span>
+            <div class="date">
+              <p class="date__text">Date</p>
+              <div class="date__input-container">
+                <input
+                  id="airDatepicker"
+                  type="text"
+                  placeholder="from"
+                  class="custom-input"
+                />
+                <div class="icon-calendar">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="icon-calendar">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+              </div>
+              <div class="date__input-container">
+                <input type="text" placeholder="to" class="custom-input" />
+                <div class="icon-calendar">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="icon-calendar">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -58,6 +75,10 @@
       <main class="main">
         <section class="hero">
           <div class="container hero__container">
+            <div class="set-list-orientation-wrapper">
+              <i class="grid-line fa-solid fa-table-cells"></i>
+              <i class="grid-line fa-solid fa-bars grid-line--active"></i>
+            </div>
             <div class="hero__list">
               <div class="item">
                 <img
@@ -66,34 +87,314 @@
                   class="item-image"
                 />
                 <div class="item-content">
-                  <div class="item-section">
-                    <p>Today</p>
-                    <div class="item-stats">
-                      <span class=""
-                        ><i class="fa-solid fa-heart"></i> 128</span
-                      >
-                      <span>💬 31</span>
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="item-section">
-                    <p>9-08-2016</p>
-                    <div class="item-stats">
-                      <span>❤️ 67</span>
-                      <span>💬 22</span>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
                     </div>
                   </div>
                   <div class="item-section">
                     <p>Image upload</p>
-                    <div class="item-stats">
-                      <p class="">11-04-2016</p>
-                    </div>
+                    <p class="">11-04-2016</p>
                   </div>
                 </div>
               </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-2.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-3.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-4.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-5.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-6.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-7.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-8.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img
+                  src="./img/avatars/ava-9.jpg"
+                  alt="Image"
+                  class="item-image"
+                />
+                <div class="item-content">
+                  <div class="item-section-likes__wrapper">
+                    <div class="item-section-likes">
+                      <p>Today</p>
+                      <div class="item-stats">
+                        <span class=""
+                          ><i class="fa-solid fa-heart"></i>
+                          128
+                        </span>
+                        <span><i class="fa-solid fa-message"></i> 31</span>
+                      </div>
+                    </div>
+                    <div class="item-section-likes">
+                      <p>9-08-2016</p>
+                      <div class="item-stats">
+                        <span><i class="fa-solid fa-heart"></i> 67</span>
+                        <span><i class="fa-solid fa-message"></i> 22</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-section">
+                    <p>Image upload</p>
+                    <p class="">11-04-2016</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="load-more-btn-wrapper">
+              <button class="load-more-btn">load more</button>
             </div>
           </div>
         </section>
       </main>
     </div>
+
+    <script src="./index.js"></script>
+    <script src="./airDatepicker/air-datepicker.js"></script>
+    
+    <script>
+      const customInput = document.querySelectorAll(".custom-input");
+
+      customInput.forEach((input) => {
+        input.addEventListener("click", () => {
+          customInput.forEach((input) => (input.id = ""));
+          input.id = "airDatepicker";
+        });
+      });
+
+      new AirDatepicker("#airDatepicker", {
+        range: true,
+        multipleDateSeparator: "-",
+      });
+    </script>
+
   </body>
 </html>

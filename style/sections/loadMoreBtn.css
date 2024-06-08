@@ -1,0 +1,24 @@
+.load-more-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  margin-bottom: 60px;
+}
+
+.load-more-btn {
+  outline: none;
+  text-align: center;
+  padding: 8px 26px;
+  border-radius: 16px;
+  border: 1px solid var(--accent-grey-1);
+  text-transform: uppercase;
+  font: var(--button-font);
+  color: var(--accent-grey-1);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.load-more-btn:hover {
+  transform: scale(1.2);
+}

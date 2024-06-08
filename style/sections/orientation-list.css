@@ -1,0 +1,24 @@
+.set-list-orientation-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.set-list-orientation-wrapper > i {
+  font-size: 24px;
+  padding: 18px 0 23px 0;
+}
+
+.grid-line {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.grid-line--active {
+  color: var(--main-accent-color);
+}
+
+.grid-line:hover {
+  transform: scale(1.2);
+}

@@ -4,17 +4,33 @@
 .header {
   margin: 0 auto;
   padding: 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 86px;
-  justify-content: center;
   background: var(--header-bg-color);
   box-shadow: inset 0px 12px 24px 0px var(--box-shadow-color),
     inset 0px 4px 24px 0px var(--box-shadow-color);
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 86px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    gap: 30px;
+    flex-direction: column;
+  }
+}
+
 .header__logo {
   max-width: 138px;
+}
+
+@media (max-width: 768px) {
+  .header__logo {
+    max-width: 100px;
+  }
 }
 
 .header__content {
@@ -64,6 +80,7 @@
 
 .date {
   display: flex;
+  align-items: center;
 }
 
 .date__text {
@@ -71,14 +88,24 @@
 }
 
 .date__input-container {
+  display: flex;
+  align-items: center;
   margin-right: 22px;
+  max-width: 162px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid var(--input-border-grey);
 }
 
 .custom-input {
-}
-
-.icon-clear {
+  width: 110px;
+  border: 0;
+  outline: none;
+  font: var(--font-start);
+  color: var(--accent-grey-2);
 }
 
 .icon-calendar {
+  padding: 5px 7px;
+  background: var(--main-grey-1);
 }
